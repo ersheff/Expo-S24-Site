@@ -29,7 +29,7 @@ body > * {
 }
 
 nav {
-  align-items: end;
+  align-items: center;
 }
 
 .map-col {
@@ -58,14 +58,12 @@ nav {
   aspect-ratio: 2/1;
   width: 33.33%;
   min-width: 240px;
+  max-width: 400px;
 }
 
-.dropdown {
-  width: 16ch;
-}
-
-.separator {
-  color: var(--pico-form-element-placeholder-color);
+select {
+  width: 33.33%;
+  min-width: 20ch;
 }
 
 h3 {

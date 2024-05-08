@@ -7,44 +7,36 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <script src="script.js" defer></script>
     <title>ETBD Expo - Spring 2024</title>
   </head>
 
   <body>
-    <nav hx-target="main" hx-swap="swap:0.2s settle:0.2s">
-        <a hx-get="pages/home.html"><div class="logo-container"></div></a>
-      <ul>
-        <li>
-          <details class="dropdown">
-            <summary>Exhibits</summary>
-            <ul>
-              <li><a hx-get="pages/home.html">Home</a></li>
-              <li class="separator">- 1st Floor -</li>
-              <li><a hx-get="pages/atrium1.html">1st Floor Atrium</a></li>
-              <li><a hx-get="pages/126_128.html">Rooms 126 & 128</a></li>
-              <li><a hx-get="pages/132.html">Room 132</a></li>
-              <li><a hx-get="pages/160.html">Room 160</a></li>
-              <li><a hx-get="pages/xr.html">XR Stage</a></li>
-              <li class="separator">- 2nd Floor -</li>
-              <li><a hx-get="pages/atrium2.html">2nd Floor Atrium</a></li>
-              <li><a hx-get="pages/202_203.html">Rooms 202 & 203</a></li>
-              <li><a hx-get="pages/213.html">Room 213</a></li>
-              <li><a hx-get="pages/263.html">Room 263</a></li>
-              <li class="separator">- 3rd Floor -</li>
-              <li><a hx-get="pages/atrium3.html">3rd Floor Atrium</a></li>
-              <li><a hx-get="pages/321.html">Room 321</a></li>
-            </ul>
-          </details>
-        </li>
-      </ul>
+    <nav hx-target="main" hx-swap="swap:0.2s settle:0.2s" >
+      <a hx-get="pages/home.html"><div class="logo-container"></div></a>
+      <select name="select">
+        <option hx-get="pages/home.html">Home</option>
+        <option disabled>- 1st Floor -</option>
+        <option hx-get="pages/atrium1.html">1st Floor Atrium</option>
+        <option hx-get="pages/126_128.html">Rooms 126 & 128</option>
+        <option hx-get="pages/132.html">Room 132</option>
+        <option hx-get="pages/160.html">Room 160</option>
+        <option hx-get="pages/xr.html">XR Stage</option>
+        <option disabled>- 2nd Floor -</option>
+        <option hx-get="pages/atrium2.html">2nd Floor Atrium</option>
+        <option hx-get="pages/202_203.html">Rooms 202 & 203</option>
+        <option hx-get="pages/213.html">Room 213</option>
+        <option hx-get="pages/263.html">Room 263</option>
+        <option disabled>- 3rd Floor -</option>
+        <option hx-get="pages/atrium3.html">3rd Floor Atrium</option>
+        <option hx-get="pages/321.html">Room 321</option>
+      </select>
     </nav>
 
     <hr />
 
     <main></main>
-
   </body>
 </html>

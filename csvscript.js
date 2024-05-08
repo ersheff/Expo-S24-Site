@@ -3,8 +3,8 @@ const csv = require("csv-parser");
 
 let html = "";
 
-const csvFile = "csvs/AA_IND.csv";
-const course = "452 - Senior Degree Project";
+const csvFile = "csvs/All.csv";
+const course = "377 - Independent Study";
 
 fs.createReadStream(csvFile)
   .pipe(csv())
