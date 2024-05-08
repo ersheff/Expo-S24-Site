@@ -1,0 +1,49 @@
+<h1>Welcome to the Spring 2024 ETBD Expo!</h1>
+<hr />
+
+<div class="home-container">
+  <p>
+    Blah blah blah words go here Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Blanditiis voluptatibus quam dolorem doloribus dolorum
+    facilis dolor molestias cupiditate. Nemo, veritatis!
+  </p>
+  <div class="map-col">
+    <div
+      class="map-container"
+      onclick="popup(this)"
+      data-image="images/floor1.webp"
+    >
+      <img class="map" src="images/floor1.webp" alt="" />
+    </div>
+    <div
+      class="map-container"
+      onclick="popup(this)"
+      data-image="images/floor2.webp"
+    >
+      <img class="map" src="images/floor2.webp" alt="" />
+    </div>
+    <div
+      class="map-container"
+      onclick="popup(this)"
+      data-image="images/floor3.webp"
+    >
+      <img class="map" src="images/floor3.webp" alt="" />
+    </div>
+  </div>
+</div>
+
+<script>
+  function popup(e) {
+    const imgSrc = e.dataset.image;
+    const popup = document.createElement("dialog");
+    const popupImg = document.createElement("img");
+    popupImg.src = imgSrc;
+    popupImg.style.setProperty("width", "90%");
+    popup.appendChild(popupImg);
+    document.body.appendChild(popup);
+    popup.showModal();
+    popup.addEventListener("click", () => {
+      popup.remove();
+    });
+  }
+</script>
